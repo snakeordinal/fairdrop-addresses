@@ -11,7 +11,7 @@ Those rules are:
 
 4. Excluding inscriptions whose file type starts with either “text/plain” or “application/json” (for example “text/plain;charset=utf-8” inscriptions would be excluded)
 
-Output files have been included in this repository, but anyone should be able to follow the steps below to produce the exact same output files, and validate that these are correct and unmodified.
+An xz compressed archive of the inscription snapshot files has been provided for [download](http://45.61.136.53/inscriptions.tar.xz), but anyone should be able to follow the steps below to produce the exact same files, and validate that these are correct and unmodified.
 
 ### Steps to reproduce
 
