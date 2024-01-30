@@ -2,7 +2,6 @@ import requests
 import os
 import multiprocessing
 import json
-import logging
 from bs4 import BeautifulSoup
 
 CHUNK_SIZE = 10000
@@ -36,7 +35,6 @@ def get_inscriptions(inscriptions_chunk):
         end_num = NUM_INSCRIPTIONS
     print(f"Extracting {start_num} to {end_num}")
     for n in range(start_num, end_num):
-        logging.info(n)
         inscription = requests.get(f"{ORD_API}/inscription/{n}", headers={"Accept": "application/json"}).json()
         
         # The Ord API currently does not return a content type for delegate
