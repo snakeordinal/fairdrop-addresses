@@ -11,12 +11,7 @@ Those rules are:
 
 4. Excluding inscriptions whose file type starts with either “text/plain” or “application/json” (for example “text/plain;charset=utf-8” inscriptions would be excluded)
 
-An xz compressed archive of the inscription snapshot files has been provided for download at the following link:
-```
-http://45.61.136.53/inscriptions.tar.xz
-```
-
-However, anyone should be able to follow the steps below to produce the exact same files, and validate that these are correct and unmodified.
+The resulting output files have been provided in CSV and JSON format in this repo, however anyone should be able to follow the steps below to produce the exact same files, and validate that these are correct and unmodified.
 
 ### Steps to reproduce
 
@@ -43,6 +38,13 @@ python extract_inscriptions.py
 ```
 
 Note that this will take a _long_ time to run. Be patient.
+
+If you want to play around with the next step while you are waiting, an xz compressed archive of the inscription snapshot files has been provided for download at the following link:
+```
+http://45.61.136.53/inscriptions.tar.xz
+```
+
+The extractor script should produce the exact same files as contained in this archive.
 
 #### Run the fairdrop addresses generator program
 The `fairdrop_addresses.py` program reads in all of the inscription metadata in the JSONL files, and processes the data to produce an address list CSV file based on the rules defined for the fairdrop.
