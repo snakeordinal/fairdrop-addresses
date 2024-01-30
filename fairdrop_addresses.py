@@ -31,10 +31,9 @@ fairdrop_addresses = spark.sql(
     FROM 
         all_inscriptions
     WHERE 
-            content_type NOT LIKE 'text/plain%'
-        AND content_type NOT LIKE 'application/json%'
+            COALESCE(content_type, '') NOT LIKE 'text/plain%'
+        AND COALESCE(content_type, '') NOT LIKE 'application/json%'
         AND address IS NOT NULL
-        AND content_type IS NOT NULL
     GROUP BY address
     HAVING COUNT(DISTINCT inscription_id) >= 3
     ORDER BY num_inscriptions DESC, address
