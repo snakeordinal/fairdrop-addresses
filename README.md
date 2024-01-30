@@ -42,9 +42,10 @@ Note that this will take a _long_ time to run. Be patient.
 #### Run the fairdrop addresses generator program
 The `fairdrop_addresses.py` program reads in all of the inscription metadata in the JSONL files, and processes the data to produce an address list CSV file based on the rules defined for the fairdrop.
 
-This program uses the `pyspark` package to process the data, so to run you must first install it:
+This program uses the `pyspark` and `pandas` packages to process the data, so to run you must first install them:
 ```bash
 pip install pyspark
+pip install pandas
 ```
 
 Then run the program:
