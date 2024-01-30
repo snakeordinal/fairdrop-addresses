@@ -52,4 +52,4 @@ Then run the program:
 python fairdrop_addresses.py
 ```
 
-This will output a CSV file named `fairdrop_addresses.csv` which is the list of addresses which match the fairdrop rules.
+This will output a CSV file named `fairdrop_addresses.csv` which is the list of addresses which match the fairdrop rules, as well as a corresponding `fairdrop_addresses.json` JSON file.
